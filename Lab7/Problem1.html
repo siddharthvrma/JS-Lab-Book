@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loan Information</title>
+    </head>
+    <body>
+        <form>
+            <h1 style="font-weight: bold;">Enter Loan Information :</h1>
+            <table style="font-size: 20px;">
+                <tr>
+                    <td>1) Amount of the Loan(any currency):</td>
+                    <td><input type="number" id="loan"></td>
+                </tr>
+                <tr>
+                    <td>2) Annual percentage rate of interest:</td>
+                    <td><input type="number" id="roi"></td>
+                </tr>
+                <tr>
+                    <td>3) Repayment period in years:</td>
+                    <td><input type="number" id="time"></td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="Compute()">Compute</button>
+            <h1 style="font-weight: bold;">Payment Information :</h1>
+            <table style="font-size: 20px;">
+                <tr>
+                    <td>4) Your Monthly Payment will be:</td>
+                    <td>
+                        <script>
+
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5) Your Total Payment will be:</td>
+                    <td>
+                        <script>
+                            document.write();
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6) Your Total Interests Payment will be:</td>
+                    <td>
+                        <script>
+
+                        </script>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function Compute(){
+                
+                var p=document.getElementById("loan").value;
+                var r=document.getElementById("roi").value;
+                var t=document.getElementById("time").value;
+                var i=(p*r*t)/100;
+                var amount=p+i;
+                document.write(amount);
+                document.write(i);
+            }
+        </script>
+    </body>
+</html>

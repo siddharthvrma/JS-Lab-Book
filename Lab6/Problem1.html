@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Displaying Products</title>
+    </head>
+    <body style="background-color: aqua;">
+        <h1><b>PRODUCTS</b></h1>
+        <form>
+            <table border="1" bordercolor="white">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                </tr>
+                <tr>
+                    <th>Barbie Doll</th>
+                    <th>Beautiful</th>
+                    <th>20</th>
+                    <th><input type="number" id="bqty"></th>
+                </tr>
+                <tr>
+                    <th>Calculator</th>
+                    <th>Calculator with latest feature</th>
+                    <th>30</th>
+                    <th><input type="number" id="cqty"></th>
+                </tr>
+                <tr>
+                    <th>Mobile Phone</th>
+                    <th>Camera, JAVA Games, GPRS</th>
+                    <th>40</th>
+                    <th><input type="number" id="mpqty"></th>
+                </tr>
+                <tr>
+                    <th>LG DVD</th>
+                    <th>5 dics changer</th>
+                    <th>50</th>
+                    <th><input type="number" id="dvdqty"></th>
+                </tr>
+            </table>
+            <tr aria-colspan="1">
+                <button onclick="Order()">ORDER</button>
+            </tr>
+        </form>
+    </body>
+    <script>
+       function Order(){
+        var barbieQty=document.getElementById("bqty").value;
+        var calculatorQty=document.getElementById("cqty").value;
+        var phoneQty=document.getElementById("mpqty").value;
+        var lgDVDQty=document.getElementById("dvdqty").value;
+        var myWindow;
+        var total;
+        if(barbieQty==0 && calculatorQty==0 && phoneQty==0 && lgDVDQty==0){
+            alert("No Item Selected");
+        }
+        else{
+            myWindow=window.open("","","width=223,height=223,top=200,left=500");
+            myWindow.document.write("<h1 align=center><b>INVOICE</b></h1>");
+            myWindow.document.write("<form>");
+                myWindow.document.write("<table border=1 align=center>");
+                    myWindow.document.write("<tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr>");
+                    if(barbieQty!=0){
+                        total=barbieQty*20;
+                        myWindow.document.write("<tr><td>Barbie Doll</td><td>"+barbieQty+"</td><td>20</td><td>"+total+"</td></tr>");
+                    }
+                    if(calculatorQty!=0){
+                        total=calculatorQty*30;
+                        myWindow.document.write("<tr><td>Calculator</th><td>"+calculatorQty+"</td><td>30</td><td>"+total+"</td></tr>");
+                    }
+                    if(phoneQty!=0){
+                        total=phoneQty*40;
+                        myWindow.document.write("<tr><td>Mobile Phone</td><td>"+phoneQty+"</td><td>40</td><td>"+total+"</td></tr>");
+                    }
+                    if(lgDVDQty!=0){
+                        total=lgDVDQty*50;
+                        myWindow.document.write("<tr><td>LG DVD</td><td>"+lgDVDQty+"</td><td>50</td><td>"+total+"</td></tr>");
+                    }
+                myWindow.document.write("</table");
+            myWindow.document.write("</form");
+        }
+       }
+    </script>
+
+</html>

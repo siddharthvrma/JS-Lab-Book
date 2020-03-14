@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Displaying Date using Date Object</title>
+    </head>
+    <body style="font-style: italic; font-weight: bold; font-size: 20px; color: chartreuse">
+        <script>
+            dateinfo=new Date()
+            var month=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+            var day=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+            document.write(month[dateinfo.getMonth()])
+            document.write(" "+day[dateinfo.getDay()])
+            document.write(" "+dateinfo.getDate())
+            document.write(" "+dateinfo.getHours()+":"+dateinfo.getMinutes()+":"+dateinfo.getSeconds())
+            document.write(" "+dateinfo.getFullYear())
+            if(dateinfo.getHours()<12){
+                document.write("<br>Good Morning")
+            }
+            else if(dateinfo.getHours()>=12&&dateinfo.getHours()<=17){
+                document.write("<br>Good Afternoon")
+            }if(dateinfo.getHours()>17){
+                document.write("<br>Good Night")
+            }
+        </script>
+    </body>
+</html>

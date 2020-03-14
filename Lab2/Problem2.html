@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compound Interest</title>
+    </head>
+    <body>
+        <hr>
+        <p>--------------------------------------------------------------------<br>
+            **********<b>Calculate Compound Interest</b>**********<br>
+            --------------------------------------------------------------------
+        </p>
+        <script>
+            var p=1000
+            var r=10
+            var n=1
+            var ci=(p*(1+Math.pow((r/100),n)))-p
+            document.write("<code><b>Principal-</b></code>"+p)
+            document.write("<br><code><b>Rate of Interest-</b></code>"+r)
+            document.write("<br><code><b>Period-</b></code>"+n)
+            document.write("<br><code><b>Compound Interest-</b></code>"+ci)
+        </script>
+    </body>
+</html>
